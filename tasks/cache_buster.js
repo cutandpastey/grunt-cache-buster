@@ -1,21 +1,23 @@
 /*
  * grunt-cache-buster
- * https://github.com/jparsons/cache-buster
+ * https://github.com/cutandpastey/cache-buster
  *
  * Copyright (c) 2013 Jon Parsons
  * Licensed under the MIT license.
  */
 
+
 /*
-*   TEMPLATE REPLACEMENT STRING:
-*   @*filename*@
-*
-* */
+ *   add all target action to queue suck that
+ *   operations can be performed in sequence
+ *
+ * */
 
 
 /*
-*   TODO --> THROW SOME EXCEPTIONS JAM FOOL
-* */
+ *   TODO --> THROW SOME EXCEPTIONS JAM FOOL
+ * */
+
 'use strict';
 
 var fs = require('fs');
@@ -43,7 +45,7 @@ module.exports = function (grunt) {
             var templateUrl  = target.target;       //  path to html template
             var dest    = target.dest;              //  destination html file to save
             var baseUrl = target.baseUrl;           //  base url to append
-            //var token = target.token
+            var regex   = target.regex
 
             var fileName;
 
@@ -66,7 +68,7 @@ module.exports = function (grunt) {
                     console.log('Writing template file', templateUrl);
                     var fileData = result[0];
                     var newUrl = baseUrl + '/' + fileName;
-                    var newFileData = fileData.replace( (/@filename@/), newUrl);
+                    var newFileData = fileData.replace( regex, newUrl);
 
                     return writeNewHashedFile(dest, newFileData)
                 })
@@ -77,8 +79,8 @@ module.exports = function (grunt) {
 };
 
 /*  ------------------------------------------------------------------
-*   READS A FILE AND RETURNS THE FILE DATA AND AN MD5 HAS OF THAT DATA
-*   ------------------------------------------------------------------ */
+ *   READS A FILE AND RETURNS THE FILE DATA AND AN MD5 HAS OF THAT DATA
+ *   ------------------------------------------------------------------ */
 var getFileData = function (filePath) {
     var deferred = Q.defer();
     fs.readFile(filePath, 'utf-8', function (err, data) {
