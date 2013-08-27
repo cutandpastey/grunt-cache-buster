@@ -1,7 +1,7 @@
 {
   "name": "grunt-cache-buster",
   "description": "Bust yo cache like a baws",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/cutandpastey/grunt-cache-buster",
   "author": {
     "name": "Jon Parsons",
