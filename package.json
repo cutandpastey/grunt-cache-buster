@@ -2,22 +2,22 @@
   "name": "grunt-cache-buster",
   "description": "Bust yo cache like a baws",
   "version": "0.1.0",
-  "homepage": "https://github.com/jparsons/cache-buster",
+  "homepage": "https://github.com/cutandpastey/cache-buster",
   "author": {
     "name": "Jon Parsons",
     "email": "jon@ctrlxctrlv.co.uk"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jparsons/cache-buster.git"
+    "url": "git://github.com/cutandpastey/cache-buster.git"
   },
   "bugs": {
-    "url": "https://github.com/jparsons/cache-buster/issues"
+    "url": "https://github.com/cutandpastey/cache-buster/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/jparsons/cache-buster/blob/master/LICENSE-MIT"
+      "url": "https://github.com/cutandpastey/cache-buster/blob/master/LICENSE-MIT"
     }
   ],
   "main": "Gruntfile.js",
