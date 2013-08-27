@@ -2,6 +2,8 @@
 
 > Bust yo cache like a baws
 
+This grunt task is still very much in development, use at your own risk :)
+
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
 
